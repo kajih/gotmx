@@ -1,0 +1,23 @@
+{{ block "blocks-index" . }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Go / Htmx / Tailwind</title>
+    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+</head>
+<body>
+<div style="display: flex; flex-direction: column">
+    <p>
+    <div id="count">
+        {{ template "countBlock" . }}
+    </div>
+    <p>
+    <button hx-target="#count" hx-get="/getcount">COUNT</button>
+</div>
+</body>
+</html>
+{{ end }}
+
+{{ block "countBlock" . }}
+    Count is {{ .Count }}
+{{ end }}

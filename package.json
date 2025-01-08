@@ -1,0 +1,17 @@
+{
+  "name": "htmx",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:css": "npx tailwindcss -i ./styles/tailwind.css -o ./cmd/embed/iweb/css/tailwind.css --watch",
+    "build:css": "npx tailwindcss -i ./styles/tailwind.css -o ./cmd/embed/web/css/tailwind.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
