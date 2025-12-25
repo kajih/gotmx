@@ -1,0 +1,18 @@
+{{ block "blocks-index" . }}
+<div class="flex flex-col items-center gap-8 w-full">
+    <div class="w-full flex justify-center">
+        <div id="count"
+            class="text-6xl font-mono font-black text-white p-6 bg-zinc-900/50 rounded-xl border border-zinc-700 shadow-inner w-fit min-w-[12rem] text-center whitespace-nowrap transition-all duration-300">
+            {{ template "countBlock" . }}
+        </div>
+    </div>
+    <button hx-target="#count" hx-get="/getcount"
+        class="px-12 py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl transition-all duration-200 transform hover:-translate-y-1 active:translate-y-0.5 shadow-[0_4px_0_0_rgba(67,56,202,1)] hover:shadow-[0_2px_0_0_rgba(67,56,202,1)] active:shadow-none cursor-pointer">
+        INCREMENT
+    </button>
+</div>
+{{ end }}
+
+{{ block "countBlock" . }}
+Count is {{ .Count }}
+{{ end }}

@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:css": "npx tailwindcss -i ./styles/tailwind.css -o ./cmd/embed/iweb/css/tailwind.css --watch",
+    "watch:css": "npx tailwindcss -i ./styles/tailwind.css -o ./cmd/embed/web/css/tailwind.css --watch",
     "build:css": "npx tailwindcss -i ./styles/tailwind.css -o ./cmd/embed/web/css/tailwind.css --minify"
   },
   "keywords": [],
@@ -12,6 +12,6 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^4.1.18"
   }
 }

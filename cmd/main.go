@@ -3,12 +3,13 @@ package main
 import (
 	"embed"
 	"errors"
-	"github.com/labstack/echo/v4"
-	"github.com/labstack/echo/v4/middleware"
 	"html/template"
 	"io"
 	"log"
 	"net/http"
+
+	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 )
 
 //go:embed embed
@@ -46,7 +47,7 @@ func main() {
 	e.Renderer = newTemplate()
 
 	e.GET("/", func(c echo.Context) error {
-		return c.Render(200, "blocks-index", count)
+		return c.Render(200, "test.html", count)
 	})
 
 	e.GET("/getcount", func(c echo.Context) error {
